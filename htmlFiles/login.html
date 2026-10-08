@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    
+<link rel="stylesheet" href="../cssFiles/login.css">
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    
+ <nav>
+        <div class="left">
+             <div class="d-flex">
+                    <i class="bi bi-taxi-front-fill"></i>
+                <p>LUXE<span>DRIVE</span></p>
+                </div>
+        </div>
+        <div class="center">
+            <a href="home.html">Home</a>
+            <a href="searchCar.html">Search cars</a>
+            <a href="dashboard.html" id="dash">My Booking</a>
+        </div>
+        <div class="right">
+            <div class="d-flex" id="display">
+                <i class="bi bi-person-circle hide" id="Icon"></i>
+            <button class="logout hide" id="Logout">Log Out</button>
+            </div>
+            <a id="SignIn" href="login.html"><button>Sign in</button></a>
+            <a id="SignUp" href="signUp.html"><button>Sign up</button></a>
+        </div>
+    </nav>
+    <div class="responsiveNone">
+        <div class="responsive">
+            <a href="home.html">
+                <div class="d-flex">
+                    <i class="bi bi-taxi-front-fill"></i>
+                <p>LUXE<span>DRIVE</span></p>
+                </div>
+            </a>
+            <button class="navbar-toggler btn" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                <i class="bi bi-list"></i></button>
+
+        </div>
+
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+            aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="center">
+                    <a href="home.html"><button>Home</button></a><br>
+                    <a href="searchCar.html"><button>Search cars</button></a><br>
+                    <a href="dashboard.html" id="dash2"><button>My Booking</button></a><br>
+                </div>
+                <div class="right">
+                     <div>
+                        <button class="hide2" id="Dashboard">Dashboard</button><br>
+                         <button class=" hide2" id="Logout2">Log Out</button><br>
+                      </div>
+                    <a id="SignIn2"  href="login.html"><button >Sign in</button></a><br>
+                    <a id="SignUp2" href="signUp.html"><button  >Sign up</button></a><br>
+                </div>
+
+            </div>
+        </div>
+    </div>
+<form id="loginForm">
+    <h1>LUXE<span class="SPN">DRIVE</span></h1>
+    <h3>Welcome back.Please sign in to your account.</h3>
+
+<label for="email" required>E-mail Address </label>
+        <input type="email" id="email" placeholder="You@example.com" required>
+
+ <label for="pass" required>Password </label>
+        <input type="password" id="pass" placeholder="Enter your Password" required  minlength="6" maxlength="25">
+
+<div class="remember-forgot">
+    <label class="remember-me">
+        <input type="checkbox">
+        Remember me
+    </label>
+
+    <a href="#" class="LINK">Forgot Password?</a>
+</div>
+<br>
+<div class="creative-divider">
+    <span></span>
+    <p>Or sign in with</p>
+    <span></span>
+</div>
+  <div class="google-login" id="googleBtn">
+    <i class="fa-brands fa-google"></i>
+    <span>Continue with Google</span>
+</div>
+<br>
+        <input type="submit" value="Sign In" id="btn">
+          
+   <div class="d-flex">
+    <span> Don't have an account?</span>
+    <a href="signUp.html">Sign up</a>
+   </div>
+</form>
+
+      <!-- ------- footer ----------- -->
+     <footer>
+        <div class="container">
+            <div class="row">
+                <div class=" col col-lg-4 col-md-6 ">
+                   
+                   <div class="d-flex d-flex3">
+                    <i class="bi bi-taxi-front-fill"></i>
+                     <p class="parg"> LUXE<span>DRIVE</span></p>
+                   </div>
+                    <p class="pp">Premium chauffeur service connecting discerning clients with professional drivers and luxury vehicles.</p>
+                </div>
+                <div class=" col22  col col-lg-4 col-md-6">
+                    <p class="parg2">Services</p>
+                    <ul>
+                        <li>Airport Transfer</li>
+                        <li>Wedding Transport</li>
+                        <li>Corporate Travel</li>
+                        <li>Special Events</li>
+                        <li>Emergency Transport</li>
+                    </ul>
+                </div>
+                <div class="col col-lg-4 col-md-6 ">
+                    <p>Contact</p>
+                    <p>
+                        <i class="bi bi-telephone-fill"></i> 
+                        <span>+20 555 6666</span>
+                    </p>
+                    <a href="https://www.facebook.com/share/1HJUWBSGRq/" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/salma2305mohamed?igsh=MTVxeXA4ZGZ4ODMyZw==" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="https://wa.me/20110590993" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                <a href="https://www.linkedin.com/in/salma-mohamed-718ab440a?utm_source=share_via&utm_content=profile&utm_medium=member_android" 
+                target="_blank"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="d-flex1">
+                <p class="pargg">© 2026 LuxeDrive. All rights reserved.</p>
+                <p class="pargg">Available 24/7 · +1 (800) 589-LUXE</p>
+            </div>
+        </div>
+     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+  
+ <script src="../jsFiles/login.js"></script>
+ <script src="../jsFiles/userICon.js"></script>
+</body>
+</html>

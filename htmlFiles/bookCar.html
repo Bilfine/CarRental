@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"> 
+    <link rel="stylesheet" href="../cssFiles/bookCar.css">
+    <title>Booking Car</title>
+</head>
+<body>
+    <nav>
+        <div class="left">
+             <div class="d-flex">
+                    <i class="bi bi-taxi-front-fill"></i>
+                <p>LUXE<span>DRIVE</span></p>
+                </div>
+        </div>
+        <div class="center">
+            <a href="home.html">Home</a>
+            <a href="searchCar.html">Search cars</a>
+            <a href="dashboard.html" id="dash">My Booking</a>
+        </div>
+        <div class="right">
+         <div class="d-flex" id="display">
+                <i class="bi bi-person-circle hide" id="Icon"></i>
+            <button class="logout hide" id="Logout">Log Out</button>
+            </div>
+            <a id="SignIn" href="login.html"><button>Sign in</button></a>
+            <a id="SignUp" href="signUp.html"><button>Sign up</button></a>
+        </div>
+    </nav>
+    <div class="responsiveNone">
+        <div class="responsive">
+            <a href="home.html">
+                <div class="d-flex">
+                    <i class="bi bi-taxi-front-fill"></i>
+                <p>LUXE<span>DRIVE</span></p>
+                </div>
+            </a>
+            <button class="navbar-toggler btn" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                <i class="bi bi-list"></i></button>
+
+        </div>
+
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+            aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="center">
+                    <a href="home.html"><button>Home</button></a><br>
+                    <a href="searchCar.html"><button>Search cars</button></a><br>
+                    <a href="dashboard.html" id="dash2"><button>My Booking</button></a><br>
+                </div>
+                <div class="right">
+                     <div>
+                        <button class="hide2" id="Dashboard">Dashboard</button><br>
+                         <button class=" hide2" id="Logout2">Log Out</button><br>
+                      </div>
+                    <a id="SignIn2"  href="login.html"><button >Sign in</button></a><br>
+                    <a id="SignUp2" href="signUp.html"><button  >Sign up</button></a><br>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="my-container">
+        <!-- <header>
+
+            <nav aria-label="breadcrumb ">
+                <ol class="breadcrumb list">
+                    <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="search-car.html">Search</a></li>
+                    <li class="breadcrumb-item">Bokking</li>
+                </ol>
+            </nav>
+        </header>
+        <hr> -->
+
+        <h1>Confirm Your Booking</h1>
+        <p class="first-p">
+            Review your selection and complete your trip details below.
+        </p>
+
+        <div class="content">
+            <div class="my-card trip-detail">
+                <h3>Trip Detail</h3>
+                <div class="input-feild">
+                    <label>PICKUP LOCATION *</label>
+                    <input type="text" placeholder="e.g. 15 Abbas El Akkad St, Nasr City, Cairo" id="pickup-location">
+                </div>
+
+                <div class="input-feild">
+                    <label>Destination *</label>
+                    <input type="text" placeholder="e.g. Cairo International Airport, Cairo, Egypt" id="destination">
+                </div>
+
+                <div class="input-feild ">
+                    <label>Pickup Date *</label>
+                    <input type="date" id="pickup-date">
+                </div>  
+
+                <div class="input-feild ">
+                    <label>Pickup Time *</label>
+                    <input type="time" id="pickup-time">
+                </div>
+
+                <div class="input-feild">    
+                    <label>Passengers</label>
+                    <input type="text" id="passengers">
+                </div>
+
+                <div class="input-feild ">
+                    <label>Trip Type</label>
+                    <select id="trip-type">
+                        <option>Family Trip</option>
+                        <option>Special Event</option>
+                        <option>Business Trip</option>
+                        <option>Airport Transfer</option>
+                        <option>Wedding Transport</option>
+                        <option>Emergency Transport</option>
+                        <option>Daily Transportation</option>
+                        <option>Other</option>
+                    </select>
+                </div>    
+
+                <div class="input-feild">
+                    <label>Special Notes (optional)</label>
+                    <textarea placeholder="Any special requests, preferences, or requirements for your driver..."></textarea>
+                </div>
+
+            </div>
+
+            <div class="my-card car">
+                <img src="" alt="" id="car">
+                <h3 class="car-name" id="car-name"></h3>
+                <p id="year-color"> 
+
+                </p>
+            </div>
+
+            <div class="my-card my-chauffeur">
+                <p>Your Chauffeur</p>
+                <div class="chauffeur">
+
+                    <img src="" alt="" id="ch-img">
+
+                    <div class="chauffeur-detail" id="chauffeur-detail">
+                        <h3 id="ch-name"></h3>
+                        
+                        <div class="extra">
+                            <span id="experience"></span>
+                            <span id="trips"></span>
+                        </div>
+                   </div>
+
+                </div>   
+            </div>
+
+            <div class="my-card price">
+                <h3>Price Estimate</h3>
+                <span class="total-estimate" id="total-estimate">20$</span>
+            </div>
+
+            <button id ="btn" class="confirm-btn">Book Now</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class=" col col-lg-4 col-md-6 ">
+                   
+                   <div class="d-flex d-flex3">
+                    <i class="bi bi-taxi-front-fill"></i>
+                     <p class="parg"> LUXE<span>DRIVE</span></p>
+                   </div>
+                    <p class="pp">Premium chauffeur service connecting discerning clients with professional drivers and luxury vehicles.</p>
+                </div>
+                <div class=" col22  col col-lg-4 col-md-6">
+                    <p class="parg2">Services</p>
+                    <ul>
+                        <li>Airport Transfer</li>
+                        <li>Wedding Transport</li>
+                        <li>Corporate Travel</li>
+                        <li>Special Events</li>
+                        <li>Emergency Transport</li>
+                    </ul>
+                </div>
+                <div class="col col-lg-4 col-md-6 ">
+                    <p>Contact</p>
+                    <p>
+                        <i class="bi bi-telephone-fill"></i> 
+                        <span>+20 555 6666</span>
+                    </p>
+                    <a href="https://www.facebook.com/share/1HJUWBSGRq/" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/salma2305mohamed?igsh=MTVxeXA4ZGZ4ODMyZw==" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="https://wa.me/20110590993" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                <a href="https://www.linkedin.com/in/salma-mohamed-718ab440a?utm_source=share_via&utm_content=profile&utm_medium=member_android" 
+                target="_blank"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="d-flex1">
+                <p class="pargg">© 2026 LuxeDrive. All rights reserved.</p>
+                <p class="pargg">Available 24/7 · +1 (800) 589-LUXE</p>
+            </div>
+        </div>
+     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../jsFiles/bookCar.js"></script>
+    <script src="../jsFiles/userICon.js"></script>
+</body>
+</html>

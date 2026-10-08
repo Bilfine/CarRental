@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../cssFiles/dashboard.css">
+</head>
+
+ <nav>
+        <div class="left">
+             <div class="d-flex">
+                    <i class="bi bi-taxi-front-fill"></i>
+                <p>LUXE<span>DRIVE</span></p>
+                </div>
+        </div>
+        <div class="center">
+            <a href="home.html">Home</a>
+            <a href="searchCar.html">Search cars</a>
+            <a href="dashboard.html" id="dash2">My Booking</a>
+        </div>
+        <div class="right">
+            <div class="d-flex" id="display">
+                <i class="bi bi-person-circle hide" id="Icon"></i>
+            <button class="logout hide" id="Logout">Log Out</button>
+            </div>
+            <a id="SignIn" href="login.html"><button>Sign in</button></a>
+            <a id="SignUp" href="signUp.html"><button>Sign up</button></a>
+        </div>
+    </nav>
+    
+    <div class="responsiveNone">
+        <div class="responsive">
+            <a href="home.html">
+                <div class="d-flex">
+                    <i class="bi bi-taxi-front-fill"></i>
+                <p>LUXE<span>DRIVE</span></p>
+                </div>
+            </a>
+            <button class="navbar-toggler btn" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                <i class="bi bi-list"></i></button>
+
+        </div>
+
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+            aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="center">
+                    <a href="home.html"><button>Home</button></a><br>
+                    <a href="searchCar.html"><button>Search cars</button></a><br>
+                    <a href="dashboard.html" id="dash2"><button>My Booking</button></a><br>
+                </div>
+                <div class="right">
+                     <div>
+                        <button class="hide2" id="Dashboard">Dashboard</button><br>
+                         <button class=" hide2" id="Logout2">Log Out</button><br>
+                      </div>
+                    <a id="SignIn2"  href="login.html"><button >Sign in</button></a><br>
+                    <a id="SignUp2" href="signUp.html"><button  >Sign up</button></a><br>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <main class="dashboard-container">
+
+        <section class="welcome-section">
+
+    <div class="welcome-user">
+
+        <div class="welcome-avatar" id="welcomeAvatar">
+            A
+        </div>
+
+        <div class="welcome-info">
+
+            <p class="welcome-text">Welcome back,</p>
+
+            <h1 id="userName">
+                Alexander Reid
+            </h1>
+
+            <p class="member-info">
+                ★
+                <span id="membership">Gold</span>
+                Member
+                •
+                since
+                <span id="memberSince">March 2024</span>
+            </p>
+
+        </div>
+
+    </div>
+
+    <button class="book-car-btn" onclick="goToBookCar()">
+        <span>＋</span>
+        Book a Car
+    </button>
+
+</section>
+
+
+        <!-- Statistics -->
+        <section class="stats-grid">
+
+    <div class="stat-card">
+        <h2 id="totalTrips">28</h2>
+        <p>Total Trips</p>
+    </div>
+
+    <div class="stat-card">
+        <h2 id="upcomingTrips">2</h2>
+        <p>Upcoming</p>
+    </div>
+
+    <div class="stat-card">
+        <h2 id="totalSpent">$8,420</h2>
+        <p>Total Spent</p>
+    </div>
+
+</section>
+<section class="dashboard-tabs">
+
+    <button class="tab-btn active" data-tab="upcoming">
+        Upcoming
+        <span id="upcomingCount">0</span>
+    </button>
+
+    <button class="tab-btn" data-tab="past">
+        Past Trips
+        <span id="pastCount">0</span>
+    </button>
+
+    <button class="tab-btn" data-tab="favorites">
+        Favorites
+    </button>
+
+    <button class="tab-btn" data-tab="profile">
+        Profile
+    </button>
+
+</section>
+
+
+        <!-- Upcoming Bookings -->
+       <section class="bookings-section" id="bookingsSection">
+
+    <div id="bookingsContainer"></div>
+
+    <div id="emptyState" class="empty-state hidden">
+
+        <h3 id="emptyTitle">No Upcoming Bookings</h3>
+
+        <p id="emptyText">
+            You don't have any upcoming trips.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- PROFILE -->
+
+<section class="profile-section hidden" id="profileSection">
+
+    <div class="profile-card">
+
+        <!-- Profile Header -->
+        <div class="profile-header">
+
+            <div class="profile-avatar" id="profileAvatar">
+                U
+            </div>
+
+            <div class="profile-header-info">
+
+                <h2 id="profileName">
+                    User
+                </h2>
+
+                <p class="profile-membership">
+                    ★
+                    <span id="profileMembership">
+                        Standard Member
+                    </span>
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Full Name -->
+        <div class="profile-field">
+
+            <label for="profileFullName">
+                FULL NAME
+            </label>
+
+            <input
+                type="text"
+                id="profileFullName"
+                class="profile-input"
+                placeholder="Enter your full name"
+            >
+
+        </div>
+
+
+        <!-- Email -->
+        <div class="profile-field">
+
+            <label for="profileEmail">
+                EMAIL ADDRESS
+            </label>
+
+            <input
+                type="email"
+                id="profileEmail"
+                class="profile-input"
+                placeholder="Enter your email"
+            >
+
+        </div>
+
+
+        <!-- Phone -->
+        <div class="profile-field">
+
+            <label for="profilePhone">
+                PHONE NUMBER
+            </label>
+
+            <input
+                type="tel"
+                id="profilePhone"
+                class="profile-input"
+                placeholder="Enter your phone number"
+            >
+
+        </div>
+
+
+        <!-- Member Since -->
+        <div class="profile-field">
+
+            <label for="profileMemberSince">
+                MEMBER SINCE
+            </label>
+
+            <input
+                type="text"
+                id="profileMemberSince"
+                class="profile-input"
+                readonly
+            >
+
+        </div>
+
+
+        <!-- Save Changes -->
+        <button
+            type="button"
+            class="save-changes-btn"
+            id="saveChangesBtn"
+        >
+            Save Changes
+        </button>
+
+    </div>
+
+</section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class=" col col-lg-4 col-md-6 ">
+                   
+                   <div class="d-flex">
+                    <i class="bi bi-taxi-front-fill"></i>
+                     <p class="parg"> LUXE<span>DRIVE</span></p>
+                   </div>
+                    <p>Premium chauffeur service connecting discerning clients with professional drivers and luxury vehicles.</p>
+                </div>
+                <div class=" col22  col col-lg-4 col-md-6">
+                    <p class="parg2">Services</p>
+                    <ul>
+                        <li>Airport Transfer</li>
+                        <li>Wedding Transport</li>
+                        <li>Corporate Travel</li>
+                        <li>Special Events</li>
+                        <li>Emergency Transport</li>
+                    </ul>
+                </div>
+                <div class="col col-lg-4 col-md-6 ">
+                    <p>Contact</p>
+                    <p>
+                        <i class="bi bi-telephone-fill"></i> 
+                        <span>+20 555 6666</span>
+                    </p>
+                     <a href="https://www.facebook.com/share/1HJUWBSGRq/" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/salma2305mohamed?igsh=MTVxeXA4ZGZ4ODMyZw==" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="https://wa.me/20110590993" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                <a href="https://www.linkedin.com/in/salma-mohamed-718ab440a?utm_source=share_via&utm_content=profile&utm_medium=member_android" 
+                target="_blank"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="d-flex1">
+                <p class="pargg">© 2026 LuxeDrive. All rights reserved.</p>
+                <p class="pargg">Available 24/7 · +1 (800) 589-LUXE</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../jsFiles/dashboard.js"></script>
+    <script src="../jsFiles/userICon.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>

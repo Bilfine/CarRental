@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUXEDRIVE#2</title>
+      <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../cssFiles/home.css">
+</head>
+
+<body>
+    <nav>
+        <div class="left">
+             <div class="d-flex">
+                    <i class="bi bi-taxi-front-fill"></i>
+                <p>LUXE<span>DRIVE</span></p>
+                </div>
+        </div>
+        <div class="center">
+            <a href="home.html">Home</a>
+            <a href="searchCar.html">Search cars</a>
+            <a href="dashboard.html" id="dash">My Booking</a>
+        </div>
+        <div class="right">
+            <div class="d-flex" id="display">
+                <i class="bi bi-person-circle hide" id="Icon"></i>
+            <button class="logout hide" id="Logout">Log Out</button>
+            </div>
+            <a id="SignIn" href="login.html"><button>Sign in</button></a>
+            <a id="SignUp" href="signUp.html"><button>Sign up</button></a>
+        </div>
+    </nav>
+    <div class="responsiveNone">
+        <div class="responsive">
+            <a href="home.html">
+                <div class="d-flex">
+                    <i class="bi bi-taxi-front-fill"></i>
+                <p>LUXE<span>DRIVE</span></p>
+                </div>
+            </a>
+            <button class="navbar-toggler btn" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                <i class="bi bi-list"></i></button>
+
+        </div>
+
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+            aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="center">
+                    <a href="home.html"><button>Home</button></a><br>
+                    <a href="searchCar.html"><button>Search cars</button></a><br>
+                    <a href="dashboard.html" id="dash2"><button>My Booking</button></a><br>
+                </div>
+                <div class="right">
+                      <div>
+                        <button class="hide2" id="Dashboard">Dashboard</button><br>
+                         <button class=" hide2" id="Logout2">Log Out</button><br>
+                      </div>
+                    <a id="SignIn2"  href="login.html"><button >Sign in</button></a><br>
+                    <a id="SignUp2" href="signUp.html"><button  >Sign up</button></a><br>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- ------- container ----------- -->
+    <div class="container">
+        <!-- ---------------- sectionOne ---------------------- -->
+        <div class="sectionOne">
+           <div class="d-flex">
+             <div data-aos="fade-right">
+                <p class="parg">
+                    <i class="bi bi-dot"></i>
+                    Premium Chauffeur Service
+                </p>
+                <h1 data-aos="fade-up">The Art of 
+                    <span style="color: #deb957;">Arriving</span><br>
+                    <span class="SPN22">in Style</span> </h1>
+                <p class="parg2" >
+                    Professional chauffeur service for discerning travelers. Premium
+                     verified vehicles, background-checked drivers, and seamless 
+                     booking — available 24 hours a day.
+                </p>
+                <p class="parg3" >
+                    <span><i class="bi bi-check-lg" style="color: #c9a84c;"></i> 5,000+ Happy Clients</span>
+                    <span><i class="bi bi-check-lg" style="color: #c9a84c;"></i> 150+ Pro Drivers</span>
+                    <span><i class="bi bi-check-lg" style="color: #c9a84c;"></i> 4.97 Avg Rating</span>
+                </p>
+            </div>
+            <div>
+                <img data-aos="fade-left" src="../img/080d47935c1ac234dafd5e57944eb573.jpg" alt="">
+            </div>
+           </div>
+        </div>
+        <!-- --------------- sectionTwo ------------------------ -->
+        <div class="sectionTwo">
+            <p class="parg">Every Occasion</p>
+            <h1>We Drive You There</h1>
+            <p class="parg2">From boardrooms to wedding venues, we provide the perfect vehicle for every chapter of your journey.</p>
+            <div class="mainDiv">
+                <div class="divOne" data-aos="fade-up" data-aos-duration="3000">
+                    <span class="icon"><i class="bi bi-suit-heart"></i></span>
+                    <p>Wedding Transport</p>
+                    <span>Arrive at your ceremony in elegance. We ensure your most special day begins with perfection.</span><br>
+                    <a href="searchCar.html">
+                        Book now
+                        <i class="bi bi-chevron-right"></i>
+                    </a>
+                </div>
+                <div class="divTwo" data-aos="fade-up"
+     data-aos-duration="3000">
+                    <span class="icon"><i class="bi bi-airplane-fill"></i></span>
+                    <p>Airport Transfer</p>
+                    <span>Flight tracking, meet & greet, and seamless transfers. Never miss a flight again.</span><br>
+                    <a href="searchCar.html">
+                        Book now
+                        <i class="bi bi-chevron-right"></i>
+                    </a>
+                </div>
+                <div class="divThree" data-aos="fade-up"
+     data-aos-duration="3000">
+                    <span class="icon"><i class="bi bi-briefcase-fill"></i></span>
+                    <p>Business & Executive</p>
+                    <span>Impress clients and partners with discreet, punctual executive transportation.</span><br>
+                    <a href="searchCar.html">
+                        Book now
+                        <i class="bi bi-chevron-right"></i>
+                    </a>
+                </div>
+                <div class="divFour" data-aos="fade-up"
+     data-aos-duration="3000">
+                    <span class="icon"><i class="bi bi-people"></i></span>
+                    <p>Family Trips</p>
+                    <span>Spacious, comfortable vehicles with patient professional drivers for the whole family.</span><br>
+                    <a href="searchCar.html">
+                        Book now
+                        <i class="bi bi-chevron-right"></i>
+                    </a>
+                </div>
+                  <div class="divFive" data-aos="fade-up"
+     data-aos-duration="3000">
+                    <span class="icon"><i class="bi bi-lightning"></i></span>
+                    <p>Emergency Transport</p>
+                    <span>24/7 on-demand availability. Rapid dispatch for urgent, time-sensitive situations.</span><br>
+                    <a href="searchCar.html">
+                        Book now
+                        <i class="bi bi-chevron-right"></i>
+                    </a>
+                </div>
+                  <div class="divSix" data-aos="fade-up"
+     data-aos-duration="3000">
+                    <span class="icon"><i class="bi bi-stars"></i></span>
+                    <p>Special Events</p>
+                    <span>Galas, red carpets, private dinners — arrive exactly as your occasion demands.</span><br>
+                    <a href="searchCar.html">
+                        Book now
+                        <i class="bi bi-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- --------------- sectionThree ------------------------ -->
+        <div class="sectionThree">
+            <p class="parg">Simple Process</p>
+            <h1>How It Works</h1>
+            <div class="mainDiv">
+                <div  data-aos="zoom-in-up">
+                    <span class="num">01</i></span>
+                    <p>Enter Your Details</p>
+                    <span class="SPN">Tell us your pickup location, destination, date, time, and passenger count.</span>
+                </div>
+                <div  data-aos="zoom-in-up">
+                    <span class="num">02</i></span>
+                    <p>Choose Your Car & Driver</p>
+                    <span class="SPN">Browse available premium vehicles and their verified professional drivers.</span>
+                </div>
+                <div  data-aos="zoom-in-up">
+                    <span class="num">03</i></span>
+                    <p>Enjoy Your Ride</p>
+                    <span class="SPN">Your chauffeur arrives on time. Sit back, relax, and arrive in style.</span>
+                </div>
+            </div>
+
+        </div>
+        <!-- --------------- sectionFour ------------------------ -->
+        <div class="sectionFour">
+            <div class="mainDiv">
+                <div  data-aos="zoom-in-up">
+                <p class="number">5,000+</p>
+                <small class="sml">Happy Clients</small>
+            </div>
+            <div  data-aos="zoom-in-up">
+                <p class="number">150+</p>
+                <small>Professional Drivers</small>
+            </div>
+            <div  data-aos="zoom-in-up" class="ML">
+                <p class="number">50+</p>
+                <small>Premium Vehicles</small>
+            </div>
+            <div  data-aos="zoom-in-up">
+                <p class="number">4.97</p>
+                <small>Average Rating</small>
+            </div>
+            </div>
+        </div>
+          <!-- --------------- sectionFive ------------------------ -->
+        <div class="sectionFive">
+            <p class="parg">Client Stories</p>
+            <h1>What Our Clients Say</h1>
+            <div class="mainDiv">
+                <div data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000" class="DIV">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <p>"The absolute best chauffeur service in the city. 
+                    James had the car waiting exactly on time and the Mercedes was 
+                    impeccable. My clients were thoroughly impressed."</p>
+                    <div class="flex">
+                        <img src="../img/img1.avif" alt="">
+                        <div>
+                            <p class="name">Victoria Sterling</p>
+                        <small>Managing Director, Sterling Capital</small>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000" class="DIV">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <p>"The absolute best chauffeur service in the city. 
+                    James had the car waiting exactly on time and the Mercedes was 
+                    impeccable. My clients were thoroughly impressed."</p>
+                    <div class="flex">
+                       <img src="../img/img2.avif" alt="">
+                       <div>
+                         <p class="name">Victoria Sterling</p>
+                        <small>Managing Director, Sterling Capital</small>
+                       </div>
+                    </div>
+                </div>
+                <div data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000" class="DIV">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <p>"The absolute best chauffeur service in the city. 
+                    James had the car waiting exactly on time and the Mercedes was 
+                    impeccable. My clients were thoroughly impressed."</p>
+                    <div class="flex">
+                        <img src="../img/img3.avif" alt="">
+                        <div><p class="name">Victoria Sterling</p>
+                        <small>Managing Director, Sterling Capital</small></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- --------------- sectionSix ------------------------ -->
+         <div class="sectionSix">
+            <h1>Ready to Ride in Luxury?</h1>
+            <p>Join thousands of satisfied clients who trust LuxeDrive for their most important journeys.</p>
+            <a data-aos="zoom-in-up" href="searchCar.html"><button>Search Available Cars <i class="bi bi-chevron-right"></i></button></a>
+         </div>
+    </div>
+    <!-- ------- footer ----------- -->
+     <footer>
+        <div class="container">
+            <div class="row">
+                <div class=" col col-lg-4 col-md-6 ">
+                   
+                   <div class="d-flex d-flex3">
+                    <i class="bi bi-taxi-front-fill"></i>
+                     <p class="parg"> LUXE<span>DRIVE</span></p>
+                   </div>
+                    <p class="pp">Premium chauffeur service connecting discerning clients with professional drivers and luxury vehicles.</p>
+                </div>
+                <div class=" col22  col col-lg-4 col-md-6">
+                    <p class="parg2">Services</p>
+                    <ul>
+                        <li>Airport Transfer</li>
+                        <li>Wedding Transport</li>
+                        <li>Corporate Travel</li>
+                        <li>Special Events</li>
+                        <li>Emergency Transport</li>
+                    </ul>
+                </div>
+                <div class="col col-lg-4 col-md-6 ">
+                    <p>Contact</p>
+                    <p>
+                        <i class="bi bi-telephone-fill"></i> 
+                        <span>+20 555 6666</span>
+                    </p>
+                     <a href="https://www.facebook.com/share/1HJUWBSGRq/" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/salma2305mohamed?igsh=MTVxeXA4ZGZ4ODMyZw==" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="https://wa.me/20110590993" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                <a href="https://www.linkedin.com/in/salma-mohamed-718ab440a?utm_source=share_via&utm_content=profile&utm_medium=member_android" 
+                target="_blank"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="d-flex1">
+                <p class="pargg">© 2026 LuxeDrive. All rights reserved.</p>
+                <p class="pargg">Available 24/7 · +1 (800) 589-LUXE</p>
+            </div>
+        </div>
+     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+<script src="../jsFiles/userICon.js"></script>
+<!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script> -->
+</body>
+
+</html>
